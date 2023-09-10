@@ -1,2 +1,2 @@
 # Blog
-Blog com java e spring boot
+Projeto Blog com java e spring boot
