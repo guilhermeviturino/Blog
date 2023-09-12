@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.blogapi.model.Comentario;
 import com.blogapi.repository.ComentarioRepository;
 
-import jakarta.websocket.server.PathParam;
-
 @RestController
 @RequestMapping(value = "/comentarios")
 public class ComentarioController {
@@ -31,7 +29,7 @@ public class ComentarioController {
     } 
 
     @PutMapping("/{id}")
-    public ResponseEntity<Comentario> atualizarComentarioPeloId(@PathParam("id") Long id, @RequestBody Comentario comentario) {
+    public ResponseEntity<Comentario> atualizarComentarioPeloId(@PathVariable("id") Long id, @RequestBody Comentario comentario) {
         Optional<Comentario> comentarioExistente = comentarioRepository.findById(id);
 
         if (comentarioExistente.isPresent()) {
