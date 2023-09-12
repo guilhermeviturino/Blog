@@ -8,11 +8,4 @@ import com.blogapi.model.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
     
-    // List<Usuario>
-
-
-
-
-    // @Query("SELECT t FROM tb_avaliacoes_produto t WHERE t.produto.idProduto = :id")
-    // Optional<List<AvaliacaoProduto>> findByProduto(@Param("id") Long idProduto);
 }
